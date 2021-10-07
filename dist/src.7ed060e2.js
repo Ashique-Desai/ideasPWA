@@ -55271,7 +55271,9 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../src/components/App.jsx":[function(require,module,exports) {
+},{"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"images/logo.svg":[function(require,module,exports) {
+module.exports = "/logo.236e4034.svg";
+},{}],"../src/components/App.jsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -55286,6 +55288,8 @@ var _Idea = _interopRequireDefault(require("./Idea"));
 var _withFirebase = require("../firebase/withFirebase");
 
 require("./App.less");
+
+var _logo = _interopRequireDefault(require("../../public/images/logo.svg"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -55352,9 +55356,10 @@ const App = props => {
     className: "app"
   }, /*#__PURE__*/_react.default.createElement("header", {
     className: "app__header"
-  }, /*#__PURE__*/_react.default.createElement("h1", {
-    className: "app__header__h1"
-  }, "Idea Box")), /*#__PURE__*/_react.default.createElement("section", {
+  }, /*#__PURE__*/_react.default.createElement("img", {
+    className: "app__header__logo",
+    src: _logo.default
+  })), /*#__PURE__*/_react.default.createElement("section", {
     ref: ideasContainer,
     className: "app__content"
   }, renderIdeas()), /*#__PURE__*/_react.default.createElement("form", {
@@ -55375,7 +55380,7 @@ const App = props => {
 var _default = (0, _withFirebase.withFirebase)(App);
 
 exports.default = _default;
-},{"react":"../node_modules/react/index.js","./Idea":"../src/components/Idea.jsx","../firebase/withFirebase":"../src/firebase/withFirebase.jsx","./App.less":"../src/components/App.less"}],"../src/index.js":[function(require,module,exports) {
+},{"react":"../node_modules/react/index.js","./Idea":"../src/components/Idea.jsx","../firebase/withFirebase":"../src/firebase/withFirebase.jsx","./App.less":"../src/components/App.less","../../public/images/logo.svg":"images/logo.svg"}],"../src/index.js":[function(require,module,exports) {
 "use strict";
 
 var _react = _interopRequireDefault(require("react"));
@@ -55421,7 +55426,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "34009" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44373" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

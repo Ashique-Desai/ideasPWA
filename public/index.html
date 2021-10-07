@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Lists PWA</title>
+    <title>Idea Box</title>
     <!-- start of Tags for PWA - https://blog.logrocket.com/creating-a-lists-pwa-with-react-and-firebase/ -->
     <link rel="shortcut icon" href="icons/icon-128x128.png" />
     <link rel="manifest" href="manifest.webmanifest" />
@@ -19,5 +19,12 @@
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <script src="../src/index.js"></script>
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('serviceWorker.js');
+        })
+      }
+    </script>
   </body>
 </html>

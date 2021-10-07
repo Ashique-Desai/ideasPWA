@@ -101,6 +101,14 @@ body,
   height: fit-content;
   margin: 0;
 }
+.app__header__logo {
+  height: 40px;
+}
+@media (max-width: 375px) {
+  .app__header__logo {
+    height: 32px;
+  }
+}
 .app__content {
   grid-area: content;
   justify-self: center;

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Idea from "./Idea";
 import { withFirebase } from "../firebase/withFirebase";
 import "./App.less";
+import Logo from '../../public/images/logo.svg';
 
 const App = (props) => {
   const { ideasCollection } = props.firebase;
@@ -64,7 +65,8 @@ const App = (props) => {
   return (
     <div className="app">
       <header className="app__header">
-        <h1 className="app__header__h1">Idea Box</h1>
+        <img className="app__header__logo" src={Logo} />
+       
       </header>
 
       <section ref={ideasContainer} className="app__content">
